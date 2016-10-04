@@ -14,22 +14,22 @@ public class ArrayMult {
         //length n + m n=first.length, m=second.length
         List<Integer> results = new ArrayList<>();
         Integer carry = 0;
-        Integer times = 0;
+        Integer innerTimes = 1;
+        Integer outerTimes = 1;
         for (int i = first.size()-1; i >= 0; i--) {
             for (int j = second.size()-1; j >= 0; j--) {
                 //multiply, store the carry int 
                 Integer thisResult = first.get(i) * second.get(j) + carry;
-                results.add(thisResult % 10);
+                results.add(thisResult % 10 * innerTimes);
                 carry = thisResult / 10;
-                times += 1;
+                innerTimes *= 10;
             }
-            System.out.print(results);
-            System.out.print(" ");
-            System.out.println(carry);
-            result = results.stream().mapToInt(in -> in.intValue()).sum();
-            System.out.println(result);
+            Integer preResult = results.stream().mapToInt(in -> in.intValue()).sum();
+            result += preResult * outerTimes;
             results.clear();
             carry = 0;
+            innerTimes = 1;
+            outerTimes *= 10;
         }
         return result;
     }

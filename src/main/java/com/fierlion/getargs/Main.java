@@ -14,7 +14,8 @@ public class Main {
         first.addAll(Arrays.asList(firstNum));
         second.addAll(Arrays.asList(secondNum));
         ArrayMult ar = new ArrayMult();
-        ar.multiplyArrays(first,second);
+        Integer result = ar.multiplyArrays(first,second);
+        System.out.println(String.format("Result is: %s", result));
     }
 }
 
