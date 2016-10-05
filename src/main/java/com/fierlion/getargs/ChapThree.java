@@ -6,12 +6,10 @@ import java.util.ArrayList;
 import java.util.ListIterator;
 import java.util.Arrays;
 
-public class ArrayMult {
+public class ChapThree {
     public static Integer multiplyArrays(List<Integer> first, List<Integer> second) {
         //what happens with negative?
         Integer result = 0;
-        //is it possible to use a primitive list? 
-        //length n + m n=first.length, m=second.length
         List<Integer> results = new ArrayList<>();
         Integer carry = 0;
         Integer innerTimes = 1;
@@ -32,5 +30,12 @@ public class ArrayMult {
             outerTimes *= 10;
         }
         return result;
+    }
+
+    public static List<Integer> permuteArray(List<Integer> original, List<Integer> permutation) {
+        for (Integer i : permutation) {
+            System.out.println(original.get(i));
+        }
+        return original;
     }
 }
