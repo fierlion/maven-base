@@ -38,6 +38,16 @@ public class LinkedList {
         this.size += 1;
     }
 
+    public void delete(int index) throws IndexOutOfBoundsException {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+        }
+        ListNode toDelete = getNode(index);
+        toDelete.getPrev().setNext(toDelete.getNext());
+        toDelete.getNext().setPrev(toDelete.getPrev());
+        this.size -= 1;
+    }
+
     public void clear() {
         this.size = 0;
         this.head = new ListNode();
@@ -47,7 +57,6 @@ public class LinkedList {
     }
 
     public class ListNode {
-        //public Integer for now to skip getters/setters/compare
         private Integer data;
         private ListNode next;
         private ListNode prev;

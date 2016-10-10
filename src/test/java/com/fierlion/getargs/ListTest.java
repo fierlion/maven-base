@@ -30,6 +30,20 @@ public class ListTest extends TestCase {
         assertEquals(testList.size(), 1);
         //compare Integer to int using unboxing
         assertTrue(testList.getNode(0).getData() == 0);
+        testList.insert(1, 1);
+        assertTrue(testList.getNode(1).getData() == 1);
+    }
+
+    public void testLinkedListDelete() {
+        LinkedList testList = new LinkedList();
+        testList.insert(0, 0);
+        testList.insert(1, 1);
+        assertEquals(testList.size(), 2);
+        testList.delete(0);
+        assertTrue(testList.getNode(0).getData() == 1);
+        assertEquals(testList.size(), 1);
+        testList.delete(0);
+        assertEquals(testList.size(), 0);
     }
 
     public void testLinkedListClear() {
