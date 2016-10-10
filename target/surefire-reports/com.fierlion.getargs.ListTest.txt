@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.fierlion.getargs.ListTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.027 sec <<< FAILURE!
+testLinkedListInsert(com.fierlion.getargs.ListTest)  Time elapsed: 0.008 sec  <<< ERROR!
+java.lang.NullPointerException
+	at com.fierlion.getargs.LinkedList.getNode(LinkedList.java:22)
+	at com.fierlion.getargs.LinkedList.insert(LinkedList.java:34)
+	at com.fierlion.getargs.ListTest.testLinkedListInsert(ListTest.java:29)
+
