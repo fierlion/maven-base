@@ -10,16 +10,15 @@ public class LinkedList {
     }
     
     public boolean isEmpty() {
-        return size == 0;
+        return this.size == 0;
     }
 
     public int size() {
-        return size;
+        return this.size;
     }
 
     public ListNode getNode(int index) {
-        ListNode iter = head.getNext();
-        System.out.println(iter.toString());
+        ListNode iter = this.head.getNext();
         for (int i=0; i<index; i++) {
             iter = iter.getNext();
         }
@@ -36,40 +35,44 @@ public class LinkedList {
         tmp.setPrev(before.getPrev());
         before.getPrev().setNext(tmp);
         before.setPrev(tmp);
-        size += 1;
+        this.size += 1;
     }
 
     public void clear() {
-        size = 0;
-        head = new ListNode();
-        tail = new ListNode();
-        head.setNext(tail);
-        tail.setPrev(head);
+        this.size = 0;
+        this.head = new ListNode();
+        this.tail = new ListNode();
+        this.head.setNext(tail);
+        this.tail.setPrev(head);
     }
 
-    private class ListNode {
+    public class ListNode {
         //public Integer for now to skip getters/setters/compare
         private Integer data;
         private ListNode next;
         private ListNode prev;
         
-        Integer getData() {return data;}
-        ListNode getNext() {return next;}
-        ListNode getPrev() {return prev;}
-        void setData(Integer data) {data = data;}
-        void setNext(ListNode next) {next = next;}
-        void setPrev(ListNode prev) {prev = prev;}
+        Integer getData() {return this.data;}
+        ListNode getNext() {return this.next;}
+        ListNode getPrev() {return this.prev;}
+        void setData(Integer data) {this.data = data;}
+        void setNext(ListNode next) {this.next = next;}
+        void setPrev(ListNode prev) {this.prev = prev;}
 
         public ListNode() {
-            data = null;
-            next = null;
-            prev = null;
+            this.data = null;
+            this.next = null;
+            this.prev = null;
         }
 
         public ListNode(Integer data) {
-            data = data;
-            next = null;
-            prev = null;
+            this.data = data;
+            this.next = null;
+            this.prev = null;
+        }
+
+        public String toString() {
+            return (String.format("%d", data));
         }
     }
 }
