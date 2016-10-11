@@ -1,4 +1,4 @@
-package com.fierlion.getargs;
+package com.fierlion.datastructs;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

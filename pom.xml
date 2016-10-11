@@ -5,11 +5,11 @@
       <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.fierlion.getargs</groupId>
-  <artifactId>getargs</artifactId>
+  <groupId>com.fierlion.datastructs</groupId>
+  <artifactId>datastructs</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>getargs</name>
+  <name>datastructs</name>
   <url>http://maven.apache.org</url>
   <build>
     <plugins>
@@ -18,7 +18,7 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>1.2.1</version>
             <configuration>
-                <mainClass>com.fierlion.getargs.Main</mainClass>
+                <mainClass>com.fierlion.datastructs.Main</mainClass>
                 <source>1.8</source>
                 <target>1.8</target>
             </configuration>

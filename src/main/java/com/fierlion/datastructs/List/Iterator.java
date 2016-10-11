@@ -1,4 +1,4 @@
-package com.fierlion.getargs;
+package com.fierlion.datastructs;
 
 public interface Iterator {
     public void first();

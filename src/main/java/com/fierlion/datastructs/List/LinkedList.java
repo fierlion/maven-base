@@ -1,4 +1,4 @@
-package com.fierlion.getargs;
+package com.fierlion.datastructs;
 
 public class LinkedList {
     public int size;

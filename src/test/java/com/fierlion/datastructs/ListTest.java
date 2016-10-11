@@ -1,4 +1,4 @@
-package com.fierlion.getargs;
+package com.fierlion.datastructs;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
