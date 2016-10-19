@@ -1,6 +1,7 @@
 com/fierlion/datastructs/Cli.class
 com/fierlion/datastructs/List.class
 com/fierlion/datastructs/Iterable.class
+com/fierlion/datastructs/BinarySearchTree.class
 com/fierlion/datastructs/LinkedList$ListNode.class
 com/fierlion/datastructs/Iterator.class
 com/fierlion/datastructs/ChapTen.class
